@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "./struts-2.5.dtd">
+<struts>
+    <constant name="struts.i18n.encoding" value="UTF-8" />
+
+    <package name="default"  extends="struts-default">
+    <global-allowed-methods>regex:.*</global-allowed-methods>
+
+    <action name="ZY00000Action_*" class="ZY00000Action" method="{1}">
+        <result name="success">ZY00010.jsp</result>
+    </action>
+
+    </package>
+</struts>

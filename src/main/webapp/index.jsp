@@ -1,0 +1,9 @@
+<html>
+<head>
+<script>
+  window.location.href="jsp/ZY00000.jsp";
+</script>
+</head>
+<body>
+</body>
+</html>

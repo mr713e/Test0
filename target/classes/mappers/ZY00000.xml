@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC
+"-//mybatis.org//DTD Mapper 3.0//EN"
+"./mybatis-3-mapper.dtd">
+<mapper namespace="zy.test.dao.ZY00000Dao">
+
+    <select id="selectStudentInfo" resultType="zy.test.bean.Student">
+        SELECT S_ID   AS studentId
+             , S_NAME AS studentName
+             , AGE    AS studentBirth
+             , SEX    AS studentSex
+         FROM ZY_STUDENT T
+    </select>
+
+    <insert id="insertStudents" parameterType="zy.test.bean.Student">
+        INSERT INTO ZY_STUDENT (
+          S_ID
+        , S_NAME
+        , AGE
+        , SEX
+        )
+         VALUES 
+       (
+         #{ssid},
+         #{sname},
+         #{age},
+         #{sex}
+       );
+    </insert>
+</mapper>
+
